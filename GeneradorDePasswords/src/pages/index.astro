@@ -28,7 +28,10 @@
   const passwordText = document.getElementById("password");
   
   button.addEventListener("click", () => {
-	const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	const letras = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	const numeros = "0123456789";
+	const simbolos = "!@#$%^&*()_+-=[]{}|;:,.<>?";
+	const caracteres = letras + numeros + simbolos;	
 	let password = "";
   
 	for (let i = 0; i < 10; i++) {
