@@ -1,6 +1,6 @@
 <html lang="es">
 	<head>
-		<meta caractereset="utf-8" />
+		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
@@ -16,7 +16,7 @@
   <section>
 	<p id="password">Tu contraseña aparecerá aquí</p>
   
-	<button id="generar">Generar contraseña</button>
+	<button id="generate">Generar contraseña</button>
   </section>
   
   <footer>
@@ -24,15 +24,15 @@
   </footer>
   
   <script>
-  const button = document.getElementById("generar");
+  const button = document.getElementById("generate");
   const passwordText = document.getElementById("password");
   
   button.addEventListener("click", () => {
-	const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	let password = "";
   
 	for (let i = 0; i < 10; i++) {
-	  password += caracteres[Math.floor(Math.random() * caracteres.length)];
+	  password += chars[Math.floor(Math.random() * chars.length)];
 	}
   
 	passwordText.textContent = password;
