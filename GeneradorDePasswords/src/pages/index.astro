@@ -1,0 +1,41 @@
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+<head>
+	<title>Generador de contraseñas</title>
+  </head>
+  
+  <header>
+	<h1>Generador de contraseñas</h1>
+  </header>
+  
+  <section>
+	<p id="password">Tu contraseña aparecerá aquí</p>
+  
+	<button id="generate">Generar contraseña</button>
+  </section>
+  
+  <footer>
+	<p>Proyecto Frontend</p>
+  </footer>
+  
+  <script>
+  const button = document.getElementById("generate");
+  const passwordText = document.getElementById("password");
+  
+  button.addEventListener("click", () => {
+	const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	let password = "";
+  
+	for (let i = 0; i < 10; i++) {
+	  password += chars[Math.floor(Math.random() * chars.length)];
+	}
+  
+	passwordText.textContent = password;
+  });
+  </script>
+</html>
