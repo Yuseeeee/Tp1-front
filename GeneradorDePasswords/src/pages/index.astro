@@ -28,11 +28,11 @@
   const passwordText = document.getElementById("password");
   
   button.addEventListener("click", () => {
-	const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	const caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	let password = "";
   
 	for (let i = 0; i < 10; i++) {
-	  password += chars[Math.floor(Math.random() * chars.length)];
+	  password += caracteres[Math.floor(Math.random() * caracteres.length)];
 	}
   
 	passwordText.textContent = password;
